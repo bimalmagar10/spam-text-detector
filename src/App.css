@@ -1,0 +1,125 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.form__wrapper {
+  margin-top: 2rem;
+  background-color: #fafafaf1;
+  border:1px solid #ddd;
+  width: 70%;
+  margin: 2rem auto;
+  padding: 3rem 2rem;
+}
+.form__wrapper > div:not(last-child) {
+  margin-bottom: 2rem;
+}
+.form__label {
+  display: block;
+  text-align: start;
+  font-size: 1.4rem;
+  color: #505050f1;
+}
+.form__input {
+  display: block;
+  width: 100%;
+  border:1px solid #eee;
+  padding:1rem;
+  background-color:#fff;
+  color: #213547;
+}
+.form__input:hover {
+  border-color: #ddd;
+}
+.form__input--wrapper {
+  padding: 1.5rem 2rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #ffff;
+}
+
+.button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.button:hover {
+  border-color: none;
+}
+.button:focus,
+.button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+.button__container > .button:not(last-child){
+    margin-right: 1rem;
+} 
+.result__container {
+  background:#fff;
+  border:1px solid #ddd;
+  border-radius: 5px;
+  padding:2rem 2.5rem;
+  width: 70%;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  min-height: 10rem;
+}
+.result__container::before {
+  content: 'Output';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4.2rem;
+  height: 1.8rem;
+  background: #ececec;
+  font-size: 1rem;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+
+}
+.result__text {
+  font-size: 2.5rem;
+  font-weight: 600;
+  display: inline-block;
+}
+.loading {
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@media only screen and (max-width:590px) {
+   html {
+    font-size: 56.25%;
+   }
+   .result__container,
+   .form__wrapper{
+    width: 100%;
+   }
+   .result__text {
+    font-size: 2rem;
+  }
+  .result__container{
+    padding: 2rem 1rem;
+  }
+
+}
