@@ -10,6 +10,9 @@ function App() {
   return (
     <>
       <HomePage/>
+      <p className='copyright'>
+        &copy;Copyright 2023.All Rights Reserved.Built with &hearts;by <a href='https://bimalthapamagar.com.np' target='_blank'>Bimal Thapa Magar</a>
+      </p>
     </>
   )
 }
